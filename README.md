@@ -19,3 +19,6 @@ AST output:
 (compilationUnit (typeDeclaration (classOrInterfaceModifier public) (classDeclaration class Main (classBody { (classBodyDeclaration (modifier (classOrInterfaceModifier public)) (modifier (classOrInterfaceModifier static)) (memberDeclaration (methodDeclaration (typeTypeOrVoid void) main (formalParameters ( (formalParameterList (formalParameter (typeType (classOrInterfaceType String) [ ]) (variableDeclaratorId args))) )) (methodBody (block { (blockStatement (statement for ( (forControl (forInit (localVariableDeclaration (typeType (primitiveType int)) (variableDeclarators (variableDeclarator (variableDeclaratorId i) = (variableInitializer (expression (primary (literal (integerLiteral 1))))))))) ; (expression (expression (primary i)) <= (expression (primary (literal (integerLiteral 10))))) ; (expressionList (expression (expression (primary i)) ++))) ) (statement (expression (expression (expression (primary System)) . out) . (methodCall println ( (expressionList (expression (primary i))) ))) ;))) }))))) }))) <EOF>)
 ```
 
+## The graphical representation of the output:-
+
+![AST](antlr4_parse_tree_java.png)
