@@ -3,22 +3,30 @@
 ## How to use:-
 
 ```
-python traverse.py <grammar_name> <grammar_rule> <file_path>
+python traverse.py <file_path>
 ```
 
 ## Example:-
 
 ```
- python traverse.py Java compilationUnit sample.java 
- ```
- 
- ## Output:-
- 
-```
-AST output:
-(compilationUnit (typeDeclaration (classOrInterfaceModifier public) (classDeclaration class Main (classBody { (classBodyDeclaration (modifier (classOrInterfaceModifier public)) (modifier (classOrInterfaceModifier static)) (memberDeclaration (methodDeclaration (typeTypeOrVoid void) main (formalParameters ( (formalParameterList (formalParameter (typeType (classOrInterfaceType String) [ ]) (variableDeclaratorId args))) )) (methodBody (block { (blockStatement (statement for ( (forControl (forInit (localVariableDeclaration (typeType (primitiveType int)) (variableDeclarators (variableDeclarator (variableDeclaratorId i) = (variableInitializer (expression (primary (literal (integerLiteral 1))))))))) ; (expression (expression (primary i)) <= (expression (primary (literal (integerLiteral 10))))) ; (expressionList (expression (expression (primary i)) ++))) ) (statement (expression (expression (expression (primary System)) . out) . (methodCall println ( (expressionList (expression (primary i))) ))) ;))) }))))) }))) <EOF>)
+ python traverse.py correct_sample.java 
 ```
 
-## The graphical representation of the output:-
+There would be no output in this case as correct_sample.java is consistent with the grammar rules.
+
+## The graphical representation of the AST of correct_sample.java,
 
 ![AST](antlr4_parse_tree_java.png)
+
+
+## Example:-
+
+```
+ python traverse.py incorrect_sample.java 
+```
+
+## Output:-
+
+```
+line 5:4 no viable alternative at input 'random_text\n    }'
+```
