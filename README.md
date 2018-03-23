@@ -3,13 +3,13 @@
 ## How to use:-
 
 ```
-python traverse.py <file_path>
+python3 traverse.py <file_path>
 ```
 
 ## Example:-
 
 ```
- python traverse.py correct_sample.java 
+ python3 traverse.py correct_sample.java 
 ```
 
 There would be no output in this case as correct_sample.java is consistent with the grammar rules.
@@ -22,7 +22,7 @@ There would be no output in this case as correct_sample.java is consistent with 
 ## Example:-
 
 ```
- python traverse.py incorrect_sample.java 
+ python3 traverse.py incorrect_sample.java 
 ```
 
 ## Output:-
